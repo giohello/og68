@@ -1,0 +1,89 @@
+* {
+    font-family: system-ui;
+    box-sizing: border-box;
+}
+
+.blogs-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+.blog-form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    margin: 10px auto;
+    display: block;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+button {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    display: block;
+    margin: 10px auto;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+.blog {
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.05);
+}
+
+.blog h3 {
+    margin-top: 0;
+}
+
+.blog small {
+    color: #777;
+    display: block;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.logout-link {
+    display: block;
+    text-align: right;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.logout-link a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.logout-link a:hover {
+    text-decoration: underline;
+}
