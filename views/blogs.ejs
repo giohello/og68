@@ -3,27 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Blogs</title>
-    <link rel="stylesheet" href="/stylesheets/auth.css">
+    <title>The Blog | Blogs</title>
     <link rel="stylesheet" href="/stylesheets/blogs.css">
+    <link rel="stylesheet" href="/stylesheets/header.css">
 </head>
 <body>
-    <h2>Post a New Blog</h2>
-    <form action="/blogs" method="POST">
-        <input type="text" name="title" placeholder="Title" required><br>
-        <textarea name="content" placeholder="Your blog content..." required></textarea><br>
-        <button type="submit">Post</button>
-    </form>
-<hr>
-<h2>All Blogs</h2>
-<% blogs.forEach(blog => { %>
-  <div>
-    <h3><%= blog.title %></h3>
-    <p><%= blog.content %></p>
-    <small>By <%= blog.author %> on <%= blog.date %></small>
-    <hr>
-  </div>
-<% }) %>
-<a href="/logout">Logout</a>
+
+<%- include('partials/header', {email: email}); %>
+
+<div class="container">
+    <h2>ALL BLOGS</h2>
+    <a class="btn" href="/logout">Logout</a>
+    <br>
+    <a class="btn" href="/blogs/new">Create a new blog</a>
+
+    <ul class="blog-list">
+        <% blogs.forEach(blog => { %>
+            <li class="blog-item">
+                <h3>
+                    <a class="blog-title" href="/blogs/<%= blog.id %>">
+                        <%= blog.title %>
+                    </a>
+                </h3>
+                <p class="blog-meta">
+                    By <%= blog.author %> on <%= blog.date %>
+                </p>
+            </li>
+        <% }) %>
+    </ul>
+</div>
 </body>
 </html>

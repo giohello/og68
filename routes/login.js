@@ -7,36 +7,25 @@ const USERS_FILE = "users.json";
 
 router.get('/', function (req, res, next) {
     if (req.session.user) {
-        return res.redirect('/');
+        return res.redirect('/blogs');
     }
-    res.render('login', { error: null });
+    res.render('login', {error: null});
 });
 
 router.post('/', function (req, res, next) {
-    const { email, password } = req.body;
-
-    let data;
-    try {
-        data = fs.readFileSync(USERS_FILE);
-    } catch (err) {
-        return res.render('login', { error: "Server error reading users file" });
-    }
-
-    let users;
-    try {
-        users = JSON.parse(data);
-    } catch (err) {
-        return res.render('login', { error: "Corrupted user data" });
-    }
+    const {email, password} = req.body;
+    const data = fs.readFileSync(USERS_FILE);
+    const users = JSON.parse(data);
 
     const user = users.find(user => user.email === email);
 
     if (!user || !bcrypt.compareSync(password, user.password)) {
-        return res.render('login', { error: `Invalid email or password` });
+        res.render('login', {error: `Invalid email or password`});
     }
 
-    req.session.user = { email: user.email };
+    req.session.user = {email: user.email};
+
     res.redirect('/blogs');
-});
+})
 
 module.exports = router;

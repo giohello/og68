@@ -23,10 +23,10 @@ app.use(express.urlencoded({extended: false}));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(session({
-    secret: 'your-secret-key',
+    secret: 'b2f40262e7d711e8cd2282e6715e94aa61f879737d5dfadc93ccd4dae165f887',
     resave: false,
     saveUninitialized: false,
-    cookie: {secure: false}
+    cookie: {secure: false, maxAge: 7 * 24 * 60 * 60 * 1000 }
 }));
 
 
