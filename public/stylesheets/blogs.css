@@ -95,3 +95,40 @@
       font-size: 15px;
     }
   }  
+
+  @media (max-width: 1024px) {
+    .blog-container {
+      padding: 24px;
+    }
+  
+    .blog-title {
+      font-size: 1.4rem;
+    }
+
+    h2 {
+      font-size: 4rem;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .blog-container {
+      padding: 16px;
+    }
+  
+    .blog-title {
+      font-size: 1.2rem;
+    }
+  
+    .blog-content {
+      font-size: 0.9rem;
+    }
+  
+    h2 {
+      font-size: 2.5rem;
+    }
+  
+    footer {
+      font-size: 12px;
+    }
+  }
+  
