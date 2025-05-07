@@ -150,23 +150,3 @@ button:hover {
 
     }
 }
-
-@media (max-width: 1024px) {
-  .auth-container {
-    width: 80%;
-    padding: 20px;
-  }
-}
-
-@media (max-width: 600px) {
-  .auth-container {
-    width: 95%;
-    padding: 10px;
-  }
-
-  .auth-container input,
-  .auth-container button {
-    width: 100%;
-    font-size: 1rem;
-  }
-}  
