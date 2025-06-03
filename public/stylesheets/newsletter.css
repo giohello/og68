@@ -2,7 +2,6 @@ body {
     background-color: rgba(9, 13, 31, 1);
 }
 
-/* Header styles override */
 .username p {
     color: #FFFFFF;
 }
@@ -15,7 +14,6 @@ body {
     background-color: #FFFFFF;
 }
 
-/* Footer styles override */
 .footer-link, .cr-label {
     color: rgb(255, 255, 255);
 }
@@ -144,7 +142,6 @@ body {
     background-color: transparent;
 }
 
-/* Blogs styles override */
 
 .recent-blogs-title {
     margin-top: 60px;

@@ -2,7 +2,6 @@ body {
     background-color: #090D1F;
 }
 
-/* Header styles override */
 .username p {
     color: #FFFFFF;
 }
@@ -15,7 +14,6 @@ body {
     background-color: #FFFFFF;
 }
 
-/* Footer styles override */
 .footer-link, .cr-label {
     color: rgb(255, 255, 255);
 }
